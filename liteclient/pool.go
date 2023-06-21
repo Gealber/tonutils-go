@@ -6,13 +6,14 @@ import (
 	"crypto/rand"
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/tl"
 	"io"
 	mRand "math/rand"
 	"reflect"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/xssnick/tonutils-go/tl"
 )
 
 const _StickyCtxKey = "_ton_node_sticky"
@@ -220,4 +221,16 @@ func (c *ConnectionPool) SetOnDisconnect(cb OnDisconnectCallback) {
 	c.reqMx.Lock()
 	c.onDisconnect = cb
 	c.reqMx.Unlock()
+}
+
+func (c *ConnectionPool) Len() int {
+	return len(c.activeNodes)
+}
+
+func (c *ConnectionPool) Less(i, j int) bool {
+	return c.activeNodes[i].timeToConnect < c.activeNodes[j].timeToConnect
+}
+
+func (c *ConnectionPool) Swap(i, j int) {
+	c.activeNodes[i], c.activeNodes[j] = c.activeNodes[j], c.activeNodes[i]
 }

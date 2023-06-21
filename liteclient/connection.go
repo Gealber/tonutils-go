@@ -12,24 +12,27 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/adnl"
 	"hash/crc32"
 	"io"
 	"log"
 	"math/big"
 	"net"
 	"reflect"
+	"sort"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/xssnick/tonutils-go/adnl"
 
 	"github.com/xssnick/tonutils-go/tl"
 )
 
 type connection struct {
-	id        uint32
-	addr      string
-	serverKey string
+	id            uint32
+	addr          string
+	serverKey     string
+	timeToConnect time.Duration
 
 	connResult chan error
 
@@ -92,7 +95,14 @@ func (c *ConnectionPool) AddConnectionsFromConfigUrl(ctx context.Context, config
 		return err
 	}
 
-	return c.AddConnectionsFromConfig(ctx, config)
+	err = c.AddConnectionsFromConfig(ctx, config)
+	if err != nil {
+		return err
+	}
+
+	sort.Sort(c)
+
+	return nil
 }
 
 func (c *ConnectionPool) AddConnection(ctx context.Context, addr, serverKey string, clientKey ...ed25519.PrivateKey) error {
@@ -148,6 +158,7 @@ func (c *ConnectionPool) AddConnection(ctx context.Context, addr, serverKey stri
 		return err
 	}
 
+	startTime := time.Now()
 	err = conn.handshake(rnd, privateKey, sKey)
 	if err != nil {
 		return err
@@ -184,6 +195,7 @@ func (c *ConnectionPool) AddConnection(ctx context.Context, addr, serverKey stri
 		go conn.startPings(5 * time.Second)
 
 		c.nodesMx.Lock()
+		conn.timeToConnect = time.Now().Sub(startTime)
 		c.activeNodes = append(c.activeNodes, conn)
 		c.nodesMx.Unlock()
 

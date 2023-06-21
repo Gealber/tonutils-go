@@ -3,8 +3,8 @@ package liteclient
 import (
 	"context"
 	"fmt"
-	"github.com/xssnick/tonutils-go/tl"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/Gealber/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/ton"
 	"testing"
 	"time"
 )

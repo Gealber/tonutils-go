@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/tl"
 	"time"
 
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/Gealber/tonutils-go/tlb"
+	"github.com/Gealber/tonutils-go/tvm/cell"
 )
 
 func init() {

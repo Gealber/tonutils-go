@@ -2,7 +2,7 @@ package adnl
 
 import (
 	"crypto/ed25519"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/tl"
 )
 
 func init() {

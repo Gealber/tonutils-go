@@ -6,7 +6,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/address"
 )
 
 func TestLoadCell_LoadDict(t *testing.T) {

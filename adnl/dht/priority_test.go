@@ -3,7 +3,7 @@ package dht
 import (
 	"bytes"
 	"encoding/hex"
-	"github.com/xssnick/tonutils-go/adnl"
+	"github.com/Gealber/tonutils-go/adnl"
 	"testing"
 )
 

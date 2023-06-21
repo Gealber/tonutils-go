@@ -5,9 +5,9 @@ import (
 	"crypto/ed25519"
 	"fmt"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/Gealber/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/tlb"
+	"github.com/Gealber/tonutils-go/tvm/cell"
 )
 
 const DefaultSubwallet = 698983191

@@ -6,7 +6,7 @@ import (
 	"crypto/ed25519"
 	"crypto/sha256"
 	"errors"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/tl"
 	"math/big"
 )
 

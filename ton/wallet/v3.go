@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/Gealber/tonutils-go/ton"
 	"time"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/Gealber/tonutils-go/tvm/cell"
 )
 
 // https://github.com/toncenter/tonweb/blob/master/src/contract/wallet/WalletSources.md#v3-wallet

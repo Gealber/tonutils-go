@@ -6,7 +6,7 @@ import (
 	"encoding/base64"
 	"encoding/hex"
 	"encoding/json"
-	"github.com/xssnick/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/address"
 	"math/big"
 	"testing"
 )

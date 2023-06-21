@@ -3,12 +3,12 @@ package nft
 import (
 	"context"
 	"fmt"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/Gealber/tonutils-go/ton"
 	"math/rand"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/Gealber/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/tlb"
+	"github.com/Gealber/tonutils-go/tvm/cell"
 )
 
 type ItemEditPayload struct {

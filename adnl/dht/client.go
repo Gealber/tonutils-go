@@ -15,11 +15,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl"
-	"github.com/xssnick/tonutils-go/adnl/address"
-	"github.com/xssnick/tonutils-go/adnl/overlay"
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/adnl"
+	"github.com/Gealber/tonutils-go/adnl/address"
+	"github.com/Gealber/tonutils-go/adnl/overlay"
+	"github.com/Gealber/tonutils-go/liteclient"
+	"github.com/Gealber/tonutils-go/tl"
 )
 
 const queryTimeout = 5000 * time.Millisecond

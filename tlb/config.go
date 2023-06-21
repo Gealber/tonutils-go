@@ -1,6 +1,6 @@
 package tlb
 
-import "github.com/xssnick/tonutils-go/tvm/cell"
+import "github.com/Gealber/tonutils-go/tvm/cell"
 
 type ValidatorSet struct {
 	_          Magic            `tlb:"#11"`

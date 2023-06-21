@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 	"encoding/hex"
-	"github.com/xssnick/tonutils-go/ton/dns"
+	"github.com/Gealber/tonutils-go/ton/dns"
 	"log"
 
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/Gealber/tonutils-go/liteclient"
+	"github.com/Gealber/tonutils-go/ton"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/tl"
 	"testing"
 	"time"
 )

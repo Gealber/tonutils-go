@@ -5,7 +5,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/Gealber/tonutils-go/ton"
 	"math/big"
 	"strings"
 	"testing"
@@ -13,9 +13,9 @@ import (
 
 	"golang.org/x/crypto/ed25519"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/Gealber/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/tlb"
+	"github.com/Gealber/tonutils-go/tvm/cell"
 )
 
 type MockAPI struct {

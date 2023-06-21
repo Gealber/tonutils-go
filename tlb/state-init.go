@@ -1,7 +1,7 @@
 package tlb
 
 import (
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/Gealber/tonutils-go/tvm/cell"
 )
 
 type TickTock struct {

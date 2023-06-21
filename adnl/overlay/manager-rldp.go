@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/hex"
 	"fmt"
-	"github.com/xssnick/tonutils-go/adnl/rldp"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/adnl/rldp"
+	"github.com/Gealber/tonutils-go/tl"
 	"sync"
 )
 

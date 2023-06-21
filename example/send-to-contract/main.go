@@ -3,16 +3,16 @@ package main
 import (
 	"context"
 	"encoding/base64"
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/Gealber/tonutils-go/tlb"
+	"github.com/Gealber/tonutils-go/tvm/cell"
 	"log"
 	"math/rand"
 	"strings"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/ton"
-	"github.com/xssnick/tonutils-go/ton/wallet"
+	"github.com/Gealber/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/liteclient"
+	"github.com/Gealber/tonutils-go/ton"
+	"github.com/Gealber/tonutils-go/ton/wallet"
 )
 
 func main() {
@@ -53,7 +53,7 @@ func main() {
 	if balance.NanoTON().Uint64() >= 3000000 {
 		// create transaction body cell, depends on what contract needs, just random example here
 		body := cell.BeginCell().
-			MustStoreUInt(0x123abc55, 32). // op code
+			MustStoreUInt(0x123abc55, 32).    // op code
 			MustStoreUInt(rand.Uint64(), 64). // query id
 			// payload:
 			MustStoreAddr(address.MustParseAddr("EQAbMQzuuGiCne0R7QEj9nrXsjM7gNjeVmrlBZouyC-SCLlO")).

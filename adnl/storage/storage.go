@@ -3,7 +3,7 @@ package storage
 import (
 	"encoding/binary"
 	"fmt"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/tl"
 )
 
 func init() {

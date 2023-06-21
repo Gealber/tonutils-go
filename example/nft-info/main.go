@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/ton"
-	"github.com/xssnick/tonutils-go/ton/nft"
+	"github.com/Gealber/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/liteclient"
+	"github.com/Gealber/tonutils-go/ton"
+	"github.com/Gealber/tonutils-go/ton/nft"
 )
 
 func main() {

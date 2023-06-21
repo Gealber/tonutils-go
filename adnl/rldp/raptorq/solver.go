@@ -3,7 +3,7 @@ package raptorq
 import (
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/adnl/rldp/raptorq/discmath"
+	"github.com/Gealber/tonutils-go/adnl/rldp/raptorq/discmath"
 )
 
 var ErrNotEnoughSymbols = errors.New("not enough symbols")

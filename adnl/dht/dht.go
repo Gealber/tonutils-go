@@ -4,9 +4,9 @@ import (
 	"crypto/ed25519"
 	"encoding/hex"
 	"fmt"
-	"github.com/xssnick/tonutils-go/adnl"
-	"github.com/xssnick/tonutils-go/adnl/address"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/adnl"
+	"github.com/Gealber/tonutils-go/adnl/address"
+	"github.com/Gealber/tonutils-go/tl"
 	"reflect"
 )
 

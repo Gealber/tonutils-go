@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/xssnick/tonutils-go/tl"
-	"github.com/xssnick/tonutils-go/tlb"
+	"github.com/Gealber/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/tlb"
 )
 
 func init() {

@@ -3,9 +3,9 @@ package ton
 import (
 	"context"
 	"fmt"
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/tl"
-	"github.com/xssnick/tonutils-go/tlb"
+	"github.com/Gealber/tonutils-go/address"
+	"github.com/Gealber/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/tlb"
 	"reflect"
 	"sync"
 	"time"

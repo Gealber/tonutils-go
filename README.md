@@ -1,6 +1,6 @@
 # tonutils-go
 
-<img align="right" width="425px" src="https://github.com/xssnick/props/blob/master/logoimg.png?raw=true">
+<img align="right" width="425px" src="https://github.com/Gealber/props/blob/master/logoimg.png?raw=true">
 
 [![Based on TON][ton-svg]][ton]
 ![Coverage](https://img.shields.io/badge/Coverage-72.3%25-brightgreen)
@@ -24,18 +24,18 @@ If you love this library and want to support its development you can donate any 
   - [Create](#Wallet)
   - [Transfer](#Wallet)
   - [Balance](#Wallet)
-  - [Transfer to many](https://github.com/xssnick/tonutils-go/blob/master/example/highload-wallet/main.go)
-  - [Send message to contract](https://github.com/xssnick/tonutils-go/blob/master/example/send-to-contract/main.go)
+  - [Transfer to many](https://github.com/Gealber/tonutils-go/blob/master/example/highload-wallet/main.go)
+  - [Send message to contract](https://github.com/Gealber/tonutils-go/blob/master/example/send-to-contract/main.go)
 - [Accounts](#Account-info-and-transactions)
   - [List transactions](#Account-info-and-transactions)
-  - [Get balance](https://github.com/xssnick/tonutils-go/blob/master/example/account-state/main.go)
+  - [Get balance](https://github.com/Gealber/tonutils-go/blob/master/example/account-state/main.go)
 - [NFT](#NFT)
   - [Details](#NFT)
-  - [Mint](https://github.com/xssnick/tonutils-go/blob/master/example/nft-mint/main.go#L42)
-  - [Transfer](https://github.com/xssnick/tonutils-go/blob/master/ton/nft/integration_test.go#L89)
+  - [Mint](https://github.com/Gealber/tonutils-go/blob/master/example/nft-mint/main.go#L42)
+  - [Transfer](https://github.com/Gealber/tonutils-go/blob/master/ton/nft/integration_test.go#L89)
 - [Jettons](#Jettons)
   - [Details](#Jettons)
-  - [Transfer](https://github.com/xssnick/tonutils-go/blob/master/example/jettons/main.go#L56)
+  - [Transfer](https://github.com/Gealber/tonutils-go/blob/master/example/jettons/main.go#L56)
 - [DNS](#DNS)
   - [Resolve](#DNS)
   - [Get records](#Records)
@@ -49,15 +49,15 @@ If you love this library and want to support its development you can donate any 
   - [Parse](#Cells)
   - [TLB Loader/Serializer](#TLB-Loader)
   - [BoC](#BoC)
-- [Network](https://github.com/xssnick/tonutils-go/tree/master/adnl)
-  - [ADNL UDP](https://github.com/xssnick/tonutils-go/blob/master/adnl/adnl_test.go)
-  - [TON Site request](https://github.com/xssnick/tonutils-go/blob/master/example/site-request/main.go)
-  - [RLDP-HTTP Client-Server](https://github.com/xssnick/tonutils-go/blob/master/example/http-rldp-highload-test/main.go)
+- [Network](https://github.com/Gealber/tonutils-go/tree/master/adnl)
+  - [ADNL UDP](https://github.com/Gealber/tonutils-go/blob/master/adnl/adnl_test.go)
+  - [TON Site request](https://github.com/Gealber/tonutils-go/blob/master/example/site-request/main.go)
+  - [RLDP-HTTP Client-Server](https://github.com/Gealber/tonutils-go/blob/master/example/http-rldp-highload-test/main.go)
 - [Custom reconnect policy](#Custom-reconnect-policy)
 - [Features to implement](#Features-to-implement)
 
 
-You can find usage examples in **[example](https://github.com/xssnick/tonutils-go/tree/master/example)** directory
+You can find usage examples in **[example](https://github.com/Gealber/tonutils-go/tree/master/example)** directory
 
 You can also join our **[Telegram group](https://t.me/tonutils)** and ask any questions :)
 
@@ -183,7 +183,7 @@ You can find full working example at `example/external-message/main.go`
 Contracts can be deployed using wallet's method `DeployContract`, 
 you should pass 3 cells there: contract code, contract initial data, message body.
 
-You can find example [here](https://github.com/xssnick/tonutils-go/blob/master/example/deploy-nft-collection/main.go)
+You can find example [here](https://github.com/Gealber/tonutils-go/blob/master/example/deploy-nft-collection/main.go)
 
 ### Account info and transactions
 You can get full account information including balance, stored data and even code using GetAccount method. 
@@ -412,7 +412,7 @@ Sometimes it is needed to import or export cell, for example to transfer over th
 
 You can simply export cell using `ToBOC()` method of cell, and import it using `cell.FromBOC(bytes)`.
 
-[Example of use can be found in tests](https://github.com/xssnick/tonutils-go/blob/master/tvm/cell/cell_test.go#L76) or in [transfer-url-for-qr](https://github.com/xssnick/tonutils-go/blob/master/example/transfer-url-for-qr/main.go) example
+[Example of use can be found in tests](https://github.com/Gealber/tonutils-go/blob/master/tvm/cell/cell_test.go#L76) or in [transfer-url-for-qr](https://github.com/Gealber/tonutils-go/blob/master/example/transfer-url-for-qr/main.go) example
 
 ### TLB Loader
 You can also load cells to structures, similar to JSON, using tags. 
@@ -444,7 +444,7 @@ if err = tlb.LoadFromCell(&state, cl.BeginParse()); err != nil {
 ```
 
 #### TLB Serialize
-Its also possible to serialize structures back to cells using `tlb.ToCell`, see [build NFT mint message](https://github.com/xssnick/tonutils-go/blob/master/ton/nft/collection.go#L189) for example.
+Its also possible to serialize structures back to cells using `tlb.ToCell`, see [build NFT mint message](https://github.com/Gealber/tonutils-go/blob/master/ton/nft/collection.go#L189) for example.
 
 ### Custom reconnect policy
 By default, standard reconnect method will be used - `c.DefaultReconnect(3*time.Second, 3)` which will do 3 tries and wait 3 seconds after each.

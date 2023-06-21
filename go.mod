@@ -9,3 +9,5 @@ require (
 )
 
 require golang.org/x/sys v0.0.0-20220325203850-36772127a21f // indirect
+
+replace github.com/xssnick/tonutils-go => github.com/Gealber/tonutils-go v0.0.0-20230516135351-43ee8f9d5c32

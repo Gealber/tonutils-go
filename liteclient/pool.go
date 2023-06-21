@@ -64,6 +64,10 @@ func NewConnectionPoolWithAuth(key ed25519.PrivateKey) *ConnectionPool {
 	return p
 }
 
+func (c *ConnectionPool) Print() {
+	fmt.Printf("ACTIVE NODES: %+v\n", c.activeNodes)
+}
+
 // StickyContext - bounds all requests with this context to the same lite-server node, if possible.
 // This is useful when we are doing some requests which depends on each other.
 //

@@ -3,10 +3,11 @@ package liteclient
 import (
 	"context"
 	"fmt"
-	"github.com/Gealber/tonutils-go/tl"
-	"github.com/Gealber/tonutils-go/ton"
 	"testing"
 	"time"
+
+	"github.com/Gealber/tonutils-go/tl"
+	"github.com/Gealber/tonutils-go/ton"
 )
 
 func Test_Conn(t *testing.T) {
